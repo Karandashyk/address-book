@@ -1,5 +1,19 @@
+contact-form {
+	.ok-cancel {
+		float: right;
+	}
+	.inputs-container {
+		margin-bottom: 20px;
+	}
+	input:focus, input:active {
+		outline: none !important;
+		box-shadow: none !important;
+		border-color: #ccc !important;
+	}
+}
 .ng-submitted {
 	.ng-invalid {
-		border: 3px solid red;
+		border: 1px solid red;
+		border-radius: 5px;
 	}
 }

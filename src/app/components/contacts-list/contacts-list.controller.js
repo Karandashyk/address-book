@@ -11,6 +11,7 @@ export default class ContactsListController {
 		this.countPerPage = 5;
 		this.currentPage = 1;
 		this.status = 'loading';
+		this.text = 'Address Book';
 	}
 
 	$onInit() {

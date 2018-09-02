@@ -1,18 +1,29 @@
-<header text="Address Book"></header>
+<header text="$ctrl.text"></header>
 
 <div class="container">
   <search query="$ctrl.query" on-query-change="$ctrl.onQueryChange(search)" ng-model-options="{debounce: 200}"></search>
-  <div ng-if="$ctrl.status === 'loaded'">
-    <ul>
+  <div class="panel panel-default"
+       ng-if="$ctrl.status === 'loaded'">
+
+    <div class="panel-heading">
+      <h3 class="panel-title">Contacts</h3>
+    </div>
+
+    <ul class="list-group">
       <list-item ng-repeat="contact in $ctrl.contacts | limitTo: $ctrl.countPerPage * $ctrl.currentPage"
                  contact="contact"
                  on-contact-delete="$ctrl.onContactDelete()"></list-item>
     </ul>
 
-    <button ng-if="$ctrl.isLoadMoreVisible()" ng-click="$ctrl.loadMore()">load more</button>
-  </div>
+    <button class="btn btn-defaul"
+            ng-if="$ctrl.isLoadMoreVisible()"
+            ng-click="$ctrl.loadMore()">
+      Load more...</button>
 
-  <a ui-sref="add">add</a>
+    <div class="panel-footer add" ui-sref="add">
+      <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+    </div>
+  </div>
 
   <div ng-if="$ctrl.status === 'loading'">Please wait ...</div>
 

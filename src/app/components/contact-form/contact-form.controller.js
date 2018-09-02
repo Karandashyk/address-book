@@ -10,10 +10,12 @@ export default class ContactFormController {
 		this.$scope.forms = {};
 		this.contactsService = contactsService;
 		this.status = 'loading';
+		this.text = '';
 	}
 
 	$onInit() {
 		if (this.contactId) {
+			this.text = 'Address Book | Edit contact';
 			this.contactsService.getContact(this.contactId)
 				.then(data => {
 					this.contact = data;
@@ -24,6 +26,7 @@ export default class ContactFormController {
 					this.status = 'error';
 				});
 		} else {
+			this.text = 'Address Book | New contact';
 			this.status = 'loaded';
 		}
 	}

@@ -1,0 +1,10 @@
+search {
+	div {
+		margin-bottom: 20px;
+	}
+	input:focus, input:active {
+		outline: none !important;
+		box-shadow: none !important;
+		border-color: #ccc !important;
+	}
+}

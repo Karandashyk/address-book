@@ -1,7 +1,8 @@
-<li ng-click="$ctrl.editContact($ctrl.contact.id)">
-	<ul>
-		<li>{{$ctrl.contact.name}}</li>
-		<li>{{$ctrl.contact.email}}</li>
-		<li ng-click="$ctrl.removeContact($event)">remove</li>
-	</ul>
+<li class="list-group-item" ng-click="$ctrl.editContact($ctrl.contact.id)">
+	<span class="name">{{$ctrl.contact.name}}</span>
+	<span class="email">{{$ctrl.contact.email}}</span>
+	<span class="glyphicon glyphicon-remove remove"
+	      aria-hidden="true"
+	      ng-click="$ctrl.removeContact($event)"
+	></span>
 </li>

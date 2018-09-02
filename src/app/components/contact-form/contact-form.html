@@ -1,14 +1,36 @@
-<!--<header text="Address Book"></header>-->
+<header text="$ctrl.text"></header>
 
 <div class="container margin">
 	<div ng-if="$ctrl.status === 'loaded'">
 		<form name="forms.todoForm" novalidate ng-submit="$ctrl.saveContact();">
-			<input type="email" ng-model="$ctrl.contact.email" email required>
-			<input type="text" ng-model="$ctrl.contact.name" required>
-			<button ng-disabled="$ctrl.$scope.forms.todoForm.$invalid && $ctrl.$scope.forms.todoForm.$submitted" type="submit">Submit</button>
+			<div class="input-group inputs-container">
+				<span class="input-group-addon" id="basic-addon1">
+					<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+				</span>
+				<input type="text"
+				       class="form-control"
+				       placeholder="Name"
+				       aria-describedby="basic-addon1"
+				       ng-model="$ctrl.contact.name" required>
+
+				<input type="email"
+				       class="form-control"
+				       placeholder="Email"
+				       ng-model="$ctrl.contact.email" email required>
+			</div>
+
+			<div class="btn-group ok-cancel" role="group">
+				<button type="button" class="btn btn-default" ui-sref="contacts">Cancel</button>
+				<button class="btn btn-success"
+						ng-disabled="$ctrl.$scope.forms.todoForm.$invalid && $ctrl.$scope.forms.todoForm.$submitted"
+				        type="submit">
+					Ok
+				</button>
+			</div>
+
 		</form>
 
-		<button ng-if="$ctrl.contactId" ng-click="$ctrl.removeContact()">remove</button>
+		<button class="btn btn-danger delete" ng-if="$ctrl.contactId" ng-click="$ctrl.removeContact()">Delete</button>
 	</div>
 
 	<div ng-if="$ctrl.status === 'loading'">Please wait ...</div>

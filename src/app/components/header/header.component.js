@@ -8,7 +8,7 @@ export default class HeaderComponent {
         this.templateUrl = headerTpl;
         this.controller = HeaderController;
 	    this.bindings = {
-		    text: '@'
+		    text: '<'
 	    };
     }
 }
