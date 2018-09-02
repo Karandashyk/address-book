@@ -1,0 +1,20 @@
+<header text="Address Book"></header>
+
+<div class="container">
+  <search query="$ctrl.query" on-query-change="$ctrl.onQueryChange(search)" ng-model-options="{debounce: 200}"></search>
+  <div ng-if="$ctrl.status === 'loaded'">
+    <ul>
+      <list-item ng-repeat="contact in $ctrl.contacts | limitTo: $ctrl.countPerPage * $ctrl.currentPage"
+                 contact="contact"
+                 on-contact-delete="$ctrl.onContactDelete()"></list-item>
+    </ul>
+
+    <button ng-if="$ctrl.isLoadMoreVisible()" ng-click="$ctrl.loadMore()">load more</button>
+  </div>
+
+  <a ui-sref="add">add</a>
+
+  <div ng-if="$ctrl.status === 'loading'">Please wait ...</div>
+
+  <div ng-if="$ctrl.status === 'error'">Error happened</div>
+</div>

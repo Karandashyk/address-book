@@ -1,0 +1,7 @@
+<li ng-click="$ctrl.editContact($ctrl.contact.id)">
+	<ul>
+		<li>{{$ctrl.contact.name}}</li>
+		<li>{{$ctrl.contact.email}}</li>
+		<li ng-click="$ctrl.removeContact($event)">remove</li>
+	</ul>
+</li>

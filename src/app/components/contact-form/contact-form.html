@@ -1,0 +1,17 @@
+<!--<header text="Address Book"></header>-->
+
+<div class="container margin">
+	<div ng-if="$ctrl.status === 'loaded'">
+		<form name="forms.todoForm" novalidate ng-submit="$ctrl.saveContact();">
+			<input type="email" ng-model="$ctrl.contact.email" email required>
+			<input type="text" ng-model="$ctrl.contact.name" required>
+			<button ng-disabled="$ctrl.$scope.forms.todoForm.$invalid && $ctrl.$scope.forms.todoForm.$submitted" type="submit">Submit</button>
+		</form>
+
+		<button ng-if="$ctrl.contactId" ng-click="$ctrl.removeContact()">remove</button>
+	</div>
+
+	<div ng-if="$ctrl.status === 'loading'">Please wait ...</div>
+
+	<div ng-if="$ctrl.status === 'error'">Error happened</div>
+</div>
