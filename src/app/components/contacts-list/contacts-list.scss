@@ -7,4 +7,15 @@ contacts-list {
 	.load-more {
 		width: 100%;
 	}
+
+	.please-wait {
+		text-align: center;
+		font-size: 20px;
+	}
+
+	.error-happened {
+		text-align: center;
+		font-size: 20px;
+		color: #FF0000;
+	}
 }

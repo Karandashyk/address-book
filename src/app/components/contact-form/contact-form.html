@@ -33,7 +33,7 @@
 		<button class="btn btn-danger delete" ng-if="$ctrl.contactId" ng-click="$ctrl.removeContact()">Delete</button>
 	</div>
 
-	<div ng-if="$ctrl.status === 'loading'">Please wait ...</div>
+	<div class="please-wait" ng-if="$ctrl.status === 'loading'">Please wait ...</div>
 
-	<div ng-if="$ctrl.status === 'error'">Error happened</div>
+	<div class="error-happened" ng-if="$ctrl.status === 'error'">Error happened</div>
 </div>
