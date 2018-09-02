@@ -1,7 +1,7 @@
 <header text="$ctrl.text"></header>
 
 <div class="container">
-  <search query="$ctrl.query" on-query-change="$ctrl.onQueryChange(search)" ng-model-options="{debounce: 200}"></search>
+  <search query="$ctrl.query" on-query-change="$ctrl.onQueryChange(search)"></search>
   <div class="panel panel-default"
        ng-if="$ctrl.status === 'loaded'">
 
@@ -10,15 +10,19 @@
     </div>
 
     <ul class="list-group">
-      <list-item ng-repeat="contact in $ctrl.contacts | limitTo: $ctrl.countPerPage * $ctrl.currentPage"
+      <list-item class="list-group__item" ng-repeat="contact in $ctrl.contacts | limitTo: $ctrl.countPerPage * $ctrl.currentPage"
                  contact="contact"
-                 on-contact-delete="$ctrl.onContactDelete()"></list-item>
+                 on-contact-delete="$ctrl.onContactDelete()">
+
+      </list-item>
     </ul>
 
-    <button class="btn btn-defaul"
+    <button class="btn btn-defaul load-more"
             ng-if="$ctrl.isLoadMoreVisible()"
             ng-click="$ctrl.loadMore()">
-      Load more...</button>
+
+      Load more...
+    </button>
 
     <div class="panel-footer add" ui-sref="add">
       <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>

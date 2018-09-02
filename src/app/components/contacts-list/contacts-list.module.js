@@ -7,6 +7,6 @@ import './contacts-list.scss';
 const contactsListModule = angular.module('contacts-list-module', [contactsServiceModule.name]);
 
 contactsListModule
-    .component('contactsList', new ContactsListComponent())
+    .component('contactsList', new ContactsListComponent());
 
 export default contactsListModule;

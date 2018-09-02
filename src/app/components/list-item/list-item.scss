@@ -1,10 +1,14 @@
 list-item {
-	span {
+	div {
 		display: block;
 		&.name {
 			font-weight: bold;
 			font-size: 2rem;
 			text-decoration: underline;
+
+			span {
+				cursor: pointer;
+			}
 		}
 		&.email {
 			font-size: 1.5rem;
@@ -12,7 +16,7 @@ list-item {
 		&.remove {
 			position: absolute;
 			right: 20px;
-			top: 20%;
+			top: calc(50% - 7px);
 			cursor: pointer;
 		}
 	}

@@ -31,8 +31,8 @@ contactsServiceModule
 
 			function setContact(id, contact) {
 				if (id) {
-					const adaNameRef = firebase.database().ref('contacts/' + id);
-					return adaNameRef.update(contact);
+					const contactItem = firebase.database().ref('contacts/' + id);
+					return contactItem.update(contact);
 				}
 
 				return new Promise(resolve => {
@@ -47,8 +47,8 @@ contactsServiceModule
 			}
 
 			function removeContact(id) {
-				const adaNameRef = firebase.database().ref('contacts/' + id);
-				return adaNameRef.remove();
+				const contactItem = firebase.database().ref('contacts/' + id);
+				return contactItem.remove();
 			}
 
 			return {

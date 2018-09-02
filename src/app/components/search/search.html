@@ -5,5 +5,6 @@
 	       placeholder="Search"
 	       aria-describedby="basic-addon"
 	       ng-model="$ctrl.query"
-	       ng-change="$ctrl.onQueryChange({search: $ctrl.query})">
+	       ng-change="$ctrl.onQueryChange({search: $ctrl.query})"
+	       ng-model-options="{debounce: 300}">
 </div>

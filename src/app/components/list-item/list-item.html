@@ -1,8 +1,10 @@
-<li class="list-group-item" ng-click="$ctrl.editContact($ctrl.contact.id)">
-	<span class="name">{{$ctrl.contact.name}}</span>
-	<span class="email">{{$ctrl.contact.email}}</span>
-	<span class="glyphicon glyphicon-remove remove"
+<li class="list-group-item">
+	<div class="name">
+		<span ng-click="$ctrl.editContact($ctrl.contact.id)" uib-tooltip="Click to edit">{{$ctrl.contact.name}}</span>
+	</div>
+	<div class="email">{{$ctrl.contact.email}}</div>
+	<div class="glyphicon glyphicon-remove remove"
 	      aria-hidden="true"
 	      ng-click="$ctrl.removeContact($event)"
-	></span>
+	></div>
 </li>

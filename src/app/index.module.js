@@ -3,6 +3,7 @@
 import config from './index.config';
 
 import uiRouter from '@uirouter/angularjs';
+import angularUI from 'angular-ui-bootstrap';
 
 import indexComponents from './index.components';
 import indexRoutes from './index.routes';
@@ -14,6 +15,8 @@ const App = angular.module(
   "AddressBook", [
     // plugins
     uiRouter,
+
+    angularUI,
 
     // components
     indexComponents.name,

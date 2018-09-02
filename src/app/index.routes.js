@@ -10,5 +10,5 @@ function routeConfig($urlRouterProvider) {
 }
 
 export default angular
-  .module('index.routes', [])
-    .config(routeConfig);
+    .module('index.routes', [])
+	.config(routeConfig);

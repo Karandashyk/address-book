@@ -13,7 +13,6 @@ export default class ListItemController {
 	}
 
 	removeContact($event) {
-		$event.stopPropagation();
 		this.contactsService.removeContact(this.contact.id)
 			.then(() => {
 				this.onContactDelete();

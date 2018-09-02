@@ -2,7 +2,7 @@
 
 <div class="container margin">
 	<div ng-if="$ctrl.status === 'loaded'">
-		<form name="forms.todoForm" novalidate ng-submit="$ctrl.saveContact();">
+		<form name="forms.contactForm" novalidate ng-submit="$ctrl.saveContact();">
 			<div class="input-group inputs-container">
 				<span class="input-group-addon" id="basic-addon1">
 					<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
@@ -22,7 +22,7 @@
 			<div class="btn-group ok-cancel" role="group">
 				<button type="button" class="btn btn-default" ui-sref="contacts">Cancel</button>
 				<button class="btn btn-success"
-						ng-disabled="$ctrl.$scope.forms.todoForm.$invalid && $ctrl.$scope.forms.todoForm.$submitted"
+						ng-disabled="$ctrl.$scope.forms.contactForm.$invalid && $ctrl.$scope.forms.contactForm.$submitted"
 				        type="submit">
 					Ok
 				</button>
