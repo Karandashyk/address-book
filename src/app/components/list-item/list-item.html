@@ -1,6 +1,9 @@
 <li class="list-group-item">
 	<div class="name">
-		<span ng-click="$ctrl.editContact($ctrl.contact.id)" uib-tooltip="Click to edit">{{$ctrl.contact.name}}</span>
+		<span ng-click="$ctrl.editContact($ctrl.contact.id)"
+		      uib-tooltip="Click to edit">
+			{{$ctrl.contact.name}}
+		</span>
 	</div>
 	<div class="email">{{$ctrl.contact.email}}</div>
 	<div class="glyphicon glyphicon-remove remove"
